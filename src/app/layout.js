@@ -17,6 +17,35 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: 'ToolZone',
   description: 'The utility workbench for everything. Text, security, images, calculators, developer tools and more - fast, private, and free. Everything runs in your browser.',
+  appleWebApp: {
+    title: 'ToolZone',
+  },
+  // --- Open Graph ---
+  openGraph: {
+    title: 'ToolZone',
+    description: 'The utility workbench for everything. Text, security, images, calculators, developer tools and more - fast, private, and free. Everything runs in your browser.',
+    url: 'https://tz.mk',
+    siteName: 'ToolZone',
+    images: [
+      {
+        url: 'https://tz.mk/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'ToolZone OG Image',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+
+  // --- Twitter ---
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ToolZone',
+    description: 'The utility workbench for everything. Text, security, images, calculators, developer tools and more - fast, private, and free. Everything runs in your browser.',
+    // creator: '@yourhandle',
+    images: ['https://tz.mk/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({ children }) {

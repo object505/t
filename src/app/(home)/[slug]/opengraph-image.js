@@ -10,7 +10,7 @@ export async function generateImageMetadata({ params }) {
   const { slug } = await params;
   const tool = await getTool(slug)
 
-  if (!tool) return {}
+  if (!tool) return [];
 
   return [
     {

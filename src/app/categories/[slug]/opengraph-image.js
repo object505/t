@@ -13,7 +13,7 @@ export async function generateImageMetadata({ params }) {
   const catFind = CATEGORIES.filter((c) => c.slug === decoded)
   const category = catFind.length ? catFind[0] : null
 
-  if (!category) return {}
+  if (!category) return [];
 
   return [
     {
