@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://tzmk.netlify.app'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://tz.mk'
   ),
   title: 'ToolZone',
   description: 'The utility workbench for everything. Text, security, images, calculators, developer tools and more - fast, private, and free. Everything runs in your browser.',

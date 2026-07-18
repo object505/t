@@ -14,7 +14,7 @@ const ToolGrid = ({ tools }) => {
   });
 
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       {tiles.map((tile) => {
         if (tile.type === "ad") {
           return <AdSlot key={tile.key} variant="tile" className="min-h-[150px]" />;
