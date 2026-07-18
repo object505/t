@@ -1,6 +1,5 @@
 'use client'
-
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Command, CommandEmpty, CommandInput, CommandItem, CommandList } from 'cmdk'
 import { TOOLS } from "@/lib/toolsData";
 import { Search, X } from "lucide-react";
@@ -8,6 +7,7 @@ import { useRouter } from 'next/navigation'
 
 export default function CommandPalette({ open, setOpen }) {
   const router = useRouter()
+  const listRef = useRef(null);
 
   useEffect(() => {
     const handler = (e) => {
@@ -34,7 +34,13 @@ export default function CommandPalette({ open, setOpen }) {
   const handleSelect = (slug) => {
     setOpen(false);
     router.push(`/${slug}`)
-  };
+  }
+
+  const resetScroll = () => {
+    requestAnimationFrame(() => {
+      listRef.current?.scrollTo({ top: 0 });
+    })
+  }
 
   return (
     <div className="fixed inset-0 z-[100] flex items-start justify-center p-4 pt-[15vh]" onClick={() => setOpen(false)}>
@@ -48,6 +54,7 @@ export default function CommandPalette({ open, setOpen }) {
             <Search className="h-4 w-4 shrink-0 text-slate-400" />
             <CommandInput
               autoFocus
+              onValueChange={resetScroll}
               placeholder="Search 100+ tools…"
               className="h-14 w-full bg-transparent text-sm text-slate-800 outline-none placeholder:text-slate-400"
             />
@@ -55,7 +62,7 @@ export default function CommandPalette({ open, setOpen }) {
               <X className="h-4 w-4" />
             </button>
           </div>
-          <CommandList className="max-h-[50vh] overflow-y-auto p-2 scrollbar-thin">
+          <CommandList ref={listRef} className="max-h-[50vh] overflow-y-auto p-2 scrollbar-thin">
             <CommandEmpty className="py-8 text-center text-sm text-slate-400">No tools found.</CommandEmpty>
             {TOOLS.map((tool) => (
               <CommandItem
