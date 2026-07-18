@@ -2,7 +2,7 @@ import { getTool } from '@/lib/toolsData'
 import { ImageResponse } from 'next/og'
 import Logo from '@/components/shared/Logo'
 
-export const runtime = 'edge'; // fast, works well with ImageResponse
+export const runtime = 'nodejs';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 

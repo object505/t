@@ -3,7 +3,7 @@ import Logo from '@/components/shared/Logo'
 import { use } from 'react'
 import { CATEGORIES } from '@/lib/toolsData'
 
-export const runtime = 'edge'; // fast, works well with ImageResponse
+export const runtime = 'nodejs';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
