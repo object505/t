@@ -47,11 +47,11 @@ const Header = ({
 
         <button
           onClick={() => setPaletteOpen(true)}
-          className="ml-auto flex items-center gap-2 rounded-lg border border-border bg-slate-50 px-3 py-2 text-sm text-slate-400 transition-colors hover:border-primary/30 hover:text-slate-600 sm:w-72 lg:w-96"
+          className="ml-auto flex items-center gap-2 rounded-lg border border-border bg-slate-50 px-3 py-2 text-sm text-slate-500 transition-colors hover:border-primary/30 hover:text-primary sm:w-72 lg:w-96"
         >
           <Search className="h-4 w-4" />
           <span className="flex-1 text-left">Search</span>
-          <kbd className="hidden rounded border border-border bg-white px-1.5 py-0.5 font-mono text-[10px] text-slate-400 sm:block">
+          <kbd className="hidden rounded border border-slate-200 bg-white px-1.5 py-0.5 font-mono text-[10px] text-slate-500 sm:block">
             ⌘K
           </kbd>
         </button>
