@@ -90,7 +90,7 @@ export const TOOLS = [
   { name: "Compound Interest Calculator", slug: "compound-interest-calculator", category: "Calculators", description: "Project compound interest growth over time." },
   { name: "Percentage Calculator", slug: "percentage-calculator", category: "Calculators", description: "Calculate percentages, increases, and decreases." },
   { name: "Discount Calculator", slug: "discount-calculator", category: "Calculators", description: "Find the final price after a discount." },
-  { name: "Unit Converter", slug: "unit-converter", category: "Calculators", description: "Convert length, weight, temperature and more." },
+  { name: "Unit Converter", slug: "unit-converter", category: "Calculators", description: "Convert length, mass, temperature and more." },
   { name: "Fuel Cost Calculator", slug: "fuel-cost-calculator", category: "Calculators", description: "Estimate fuel costs for trips." },
   { name: "Age Calculator", slug: "age-calculator", category: "Calculators", description: "Calculate exact age from a birth date." },
   { name: "Pregnancy Calculator", slug: "pregnancy-calculator", category: "Calculators", description: "Estimate due date and pregnancy week." },
