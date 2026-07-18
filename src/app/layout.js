@@ -49,6 +49,9 @@ export const metadata = {
     // creator: '@yourhandle',
     images: ['https://tz.mk/og-image.jpg'],
   },
+  other: {
+    'google-adsense-account': 'ca-pub-7682472904147708',
+  }
 };
 
 export default function RootLayout({ children }) {
