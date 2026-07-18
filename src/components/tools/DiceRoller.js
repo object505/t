@@ -79,7 +79,7 @@ export default function DiceRoller() {
                   onClick={() => rerollOne(i)}
                   disabled={rolling}
                   title="Click to reroll this die"
-                  className={`flex h-14 w-14 items-center justify-center rounded-lg border font-mono text-xl font-bold transition-transform hover:scale-105 ${
+                  className={`flex h-14 w-14 items-center justify-center rounded-lg border font-mono text-4xl font-bold transition-transform hover:scale-105 ${
                     rolling
                       ? "animate-pulse border-border bg-white text-slate-400"
                       : isMax
