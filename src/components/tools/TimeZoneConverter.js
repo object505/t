@@ -2,7 +2,49 @@
 import { useState, useMemo } from "react";
 import { ToolInput } from "@/components/tools/ToolUI";
 
-const ZONES = ["UTC", "America/New_York", "America/Los_Angeles", "America/Chicago", "Europe/London", "Europe/Paris", "Asia/Tokyo", "Asia/Shanghai", "Asia/Kolkata", "Australia/Sydney", "Pacific/Auckland", "America/Sao_Paulo", "America/Mexico_City", "Africa/Cairo", "Asia/Dubai"];
+const ALL_ZONES = Intl.supportedValuesOf("timeZone").sort();
+
+function ZoneSelect({ label, value, onChange }) {
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+
+  const filtered = useMemo(() => {
+    if (!query) return ALL_ZONES.slice(0, 50); // cap initial list for perf
+    const q = query.toLowerCase();
+    return ALL_ZONES.filter((z) => z.toLowerCase().includes(q)).slice(0, 50);
+  }, [query]);
+
+  return (
+    <div className="relative">
+      <label className="text-sm font-medium text-muted-foreground">{label}</label>
+      <input
+        type="text"
+        value={open ? query : value}
+        onFocus={() => { setOpen(true); setQuery(""); }}
+        onChange={(e) => setQuery(e.target.value)}
+        onBlur={() => setTimeout(() => setOpen(false), 150)}
+        placeholder="Search timezone..."
+        className="mt-1 w-full rounded-lg border border-border px-3 py-2 text-sm outline-none focus:border-primary"
+      />
+      {open && (
+        <ul className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-lg border border-border bg-background shadow-md text-sm">
+          {filtered.length === 0 && (
+            <li className="px-3 py-2 text-muted-foreground">No matches</li>
+          )}
+          {filtered.map((z) => (
+            <li
+              key={z}
+              onMouseDown={() => { onChange(z); setOpen(false); }}
+              className="cursor-pointer px-3 py-2 hover:bg-accent hover:text-primary"
+            >
+              {z}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
 
 export default function TimeZoneConverter() {
   const [time, setTime] = useState(new Date().toISOString().slice(0, 16));
@@ -23,13 +65,13 @@ export default function TimeZoneConverter() {
     <div className="space-y-4">
       <ToolInput type="datetime-local" label="Date & time" value={time} onChange={(e) => setTime(e.target.value)} />
       <div className="grid gap-3 sm:grid-cols-2">
-        <div><label className="text-sm font-medium text-muted-foreground">From</label><select value={fromZone} onChange={(e) => setFromZone(e.target.value)} className="mt-1 w-full rounded-lg border border-border px-3 py-2 text-sm outline-none focus:border-primary">{ZONES.map((z) => <option key={z}>{z}</option>)}</select></div>
-        <div><label className="text-sm font-medium text-muted-foreground">To</label><select value={toZone} onChange={(e) => setToZone(e.target.value)} className="mt-1 w-full rounded-lg border border-border px-3 py-2 text-sm outline-none focus:border-primary">{ZONES.map((z) => <option key={z}>{z}</option>)}</select></div>
+        <ZoneSelect label="From" value={fromZone} onChange={setFromZone} />
+        <ZoneSelect label="To" value={toZone} onChange={setToZone} />
       </div>
       {result && (
         <div className="space-y-2">
           <div className="rounded-lg border border-border bg-slate-50 p-3 text-sm"><span className="text-slate-500">{fromZone}:</span> <span className="font-medium text-slate-800">{result.from}</span></div>
-          <div className="rounded-lg border border-primary/30 bg-primary/5 p-3 text-sm"><span className="text-primary">{toZone}:</span> <span className="font-bold text-primary">{result.to}</span></div>
+          <div className="rounded-lg border border-border bg-slate-50 p-3 text-sm"><span className="text-slate-500">{toZone}:</span> <span className="font-medium text-slate-800">{result.to}</span></div>
         </div>
       )}
     </div>
