@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ToolInput } from "@/components/tools/ToolUI";
 
 export default function SerpSnippetPreview() {
-  const [title, setTitle] = useState("My Awesome Page — Atomic Utility");
+  const [title, setTitle] = useState("My Awesome Page");
   const [url, setUrl] = useState("https://example.com/page");
   const [desc, setDesc] = useState("This is a meta description that will appear in Google search results. Keep it under 160 characters for best results.");
 
