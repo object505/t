@@ -37,7 +37,7 @@ export default function CaseConverter() {
         ))}
       </div>
       <div className="flex items-start justify-between gap-2">
-        <div className="min-h-[80px] flex-1 rounded-lg border border-border bg-slate-50 p-3 font-mono text-sm text-slate-800 whitespace-pre-wrap break-words">
+        <div className="min-h-[80px] flex-1 rounded-lg border border-border bg-slate-50 p-3 font-mono text-sm text-slate-800 whitespace-pre-wrap break-all">
           {result || "Result appears here"}
         </div>
         <CopyButton value={result} />
