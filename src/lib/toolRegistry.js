@@ -195,6 +195,9 @@ import SavingsCalculator from "@/components/tools/SavingsCalculator";
 import QrCodeGeneratorUtility from "@/components/tools/QrCodeGeneratorUtility";
 import ClipboardHistory from "@/components/tools/ClipboardHistory";
 import TextCompare from "@/components/tools/TextCompare";
+import PomodoroTimer from "@/components/tools/PomodoroTimer";
+import TodoList from "@/components/tools/TodoList";
+import BarcodeGenerator from "@/components/tools/BarcodeGenerator";
 
 export const TOOL_COMPONENTS = {
   // Original 45
@@ -392,4 +395,7 @@ export const TOOL_COMPONENTS = {
   "qr-code-generator-utility": QrCodeGeneratorUtility,
   "clipboard-history": ClipboardHistory,
   "text-compare": TextCompare,
+  "pomodoro-timer": PomodoroTimer,
+  "to-do-list": TodoList,
+  "barcode-generator": BarcodeGenerator,
 }

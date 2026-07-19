@@ -211,6 +211,9 @@ export const TOOLS = [
   { name: "QR Code Generator (Utility)", slug: "qr-code-generator-utility", category: "Utility", description: "Generate QR codes for any data." },
   { name: "Clipboard History", slug: "clipboard-history", category: "Utility", description: "Track your clipboard history." },
   { name: "Text Compare", slug: "text-compare", category: "Utility", description: "Compare two blocks of text." },
+  { name: "Pomodoro Timer", slug: "pomodoro-timer", category: "Utility", description: "Stay productive with a customizable Pomodoro timer that helps you manage focused work sessions and breaks." },
+  { name: "To-Do List", slug: "to-do-list", category: "Utility", description: "Organize your tasks with a simple to-do list that lets you add, edit, complete, and manage daily activities." },
+  { name: "Barcode Generator", slug: "barcode-generator", category: "Utility", description: "Generate standard barcode formats such as Code 128, EAN-13, UPC barcodes for products, inventory, and labels." },
 ];
 
 export function getTool(slug) {
