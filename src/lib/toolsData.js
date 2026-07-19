@@ -154,6 +154,13 @@ export const TOOLS = [
   { name: "Dice Roller", slug: "dice-roller", category: "Random Generators", description: "Roll dice with custom sides and count." },
   { name: "Coin Flip", slug: "coin-flip", category: "Random Generators", description: "Flip a virtual coin for heads or tails." },
   { name: "UUID Generator", slug: "uuid-generator-random", category: "Random Generators", description: "Generate random UUIDs for any use." },
+  { name: "Magic 8 Ball", slug: "magic-8-ball", category: "Random Generators", description: "Ask any yes-or-no question and get a fun, random answer, just like the classic fortune-telling toy." },
+  { name: "Yes/No Decision Maker", slug: "yes-no-decision-maker", category: "Random Generators", description: "Get a quick, random \"Yes\" or \"No\" answer to help with simple decisions when you're feeling undecided." },
+  { name: "Random Playing Card", slug: "random-playing-card", category: "Random Generators", description: "Draw a random playing card from a standard 52-card deck instantly." },
+  { name: "Random Quote Generator", slug: "random-quote-generator", category: "Random Generators", description: "Discover inspiring, motivational, and thought-provoking quotes at random." },
+  { name: "Random Joke Generator", slug: "random-joke-generator", category: "Random Generators", description: "Get a random joke instantly to brighten your day." },
+  { name: "Wheel Spinner / Random Picker", slug: "wheel-spinner-random-picker", category: "Random Generators", description: "Make random selections with a fun spinning wheel." },
+  { name: "Lottery Number Generator", slug: "lottery-number-generator", category: "Random Generators", description: "Generate random lottery numbers instantly for games, draws, or fun experiments." },
 
   // ---- Social Media ----
   { name: "YouTube Thumbnail Downloader", slug: "youtube-thumbnail-downloader", category: "Social Media", description: "Download YouTube video thumbnails." },

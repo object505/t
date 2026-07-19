@@ -140,6 +140,13 @@ import RandomCountry from "@/components/tools/RandomCountry";
 import RandomAddress from "@/components/tools/RandomAddress";
 import FakeUserGenerator from "@/components/tools/FakeUserGenerator";
 import UuidGeneratorRandom from "@/components/tools/UuidGeneratorRandom";
+import Magic8Ball from '@/components/tools/Magic8Ball'
+import YesNoDecisionMaker from '@/components/tools/YesNoDecisionMaker'
+import RandomPlayingCard from '@/components/tools/RandomPlayingCard'
+import RandomQuoteGenerator from '@/components/tools/RandomQuoteGenerator'
+import RandomJokeGenerator from '@/components/tools/RandomJokeGenerator'
+import WheelSpinnerRandomPicker from '@/components/tools/WheelSpinnerRandomPicker'
+import LotteryNumberGenerator from '@/components/tools/LotteryNumberGenerator'
 
 // Batch 12: Social media
 import YoutubeThumbnailDownloader from "@/components/tools/YoutubeThumbnailDownloader";
@@ -317,6 +324,13 @@ export const TOOL_COMPONENTS = {
   "random-address": RandomAddress,
   "fake-user-generator": FakeUserGenerator,
   "uuid-generator-random": UuidGeneratorRandom,
+  "magic-8-ball": Magic8Ball,
+  "yes-no-decision-maker": YesNoDecisionMaker,
+  "random-playing-card": RandomPlayingCard,
+  "random-quote-generator": RandomQuoteGenerator,
+  "random-joke-generator": RandomJokeGenerator,
+  "wheel-spinner-random-picker": WheelSpinnerRandomPicker,
+  "lottery-number-generator": LotteryNumberGenerator,
 
   // Social media
   "youtube-thumbnail-downloader": YoutubeThumbnailDownloader,
