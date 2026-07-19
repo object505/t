@@ -124,6 +124,12 @@ export const TOOLS = [
   { name: "Box Shadow Generator", slug: "box-shadow-generator", category: "Developer", description: "Create CSS box shadows visually." },
   { name: "Border Radius Generator", slug: "border-radius-generator", category: "Developer", description: "Generate CSS border-radius values visually." },
   { name: "User Agent Parser", slug: "user-agent-parser", category: "Developer", description: "Parse user agent strings into browser, OS, and device details." },
+  { name: "Cron Expression Generator/Parser", slug: "cron-expression-generator-parser", category: "Developer", description: "Create cron expressions using a simple interface or parse existing cron schedules into human-readable descriptions." },
+  { name: ".gitignore Generator", slug: "gitignore-generator", category: "Developer", description: "Generate customized .gitignore files for specific programming languages, frameworks, and development environments." },
+  { name: "HTTP Status Code Lookup", slug: "http-status-lookup", category: "Developer", description: "Quickly search HTTP status codes and view their meaning, category, and common use cases." },
+  { name: "Markdown Table Generator", slug: "markdown-table-generator", category: "Developer", description: "Create properly formatted Markdown tables with an easy-to-use editor, including support for alignment and quick editing." },
+  { name: ".env File Generator", slug: "env-file-generator", category: "Developer", description: "Generate structured .env template files with environment variables for configuration." },
+  { name: "Simple Favicon Generator", slug: "simple-favicon-generator", category: "Developer", description: "Create a basic favicon from text and export it in common formats for websites and web apps." },
 
   // ---- SEO ----
   { name: "Meta Tag Generator", slug: "meta-tag-generator", category: "SEO", description: "Generate SEO meta tags for your pages." },

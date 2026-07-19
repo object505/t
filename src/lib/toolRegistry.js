@@ -114,6 +114,12 @@ import RgbToHex from "@/components/tools/RgbToHex";
 import RgbToHsl from "@/components/tools/RgbToHsl";
 import GradientGenerator from "@/components/tools/GradientGenerator";
 import AccessibilityChecker from "@/components/tools/AccessibilityChecker";
+import CronExpressionGeneratorParser from "@/components/tools/CronExpressionGeneratorParser";
+import GitignoreGenerator from "@/components/tools/GitignoreGenerator";
+import HttpStatusLookup from "@/components/tools/HttpStatusLookup";
+import MarkdownTableGenerator from "@/components/tools/MarkdownTableGenerator";
+import EnvFileGenerator from "@/components/tools/EnvFileGenerator";
+import SimpleFaviconGenerator from "@/components/tools/SimpleFaviconGenerator";
 
 // Batch 8: SEO tools
 import RobotsTxtGenerator from "@/components/tools/RobotsTxtGenerator";
@@ -305,6 +311,12 @@ export const TOOL_COMPONENTS = {
   "rgb-to-hsl": RgbToHsl,
   "gradient-generator": GradientGenerator,
   "accessibility-checker": AccessibilityChecker,
+  "cron-expression-generator-parser": CronExpressionGeneratorParser,
+  "gitignore-generator": GitignoreGenerator,
+  "http-status-lookup": HttpStatusLookup,
+  "markdown-table-generator": MarkdownTableGenerator,
+  "env-file-generator": EnvFileGenerator,
+  "simple-favicon-generator": SimpleFaviconGenerator,
 
   // SEO
   "robots-txt-generator": RobotsTxtGenerator,
