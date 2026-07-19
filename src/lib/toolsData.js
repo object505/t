@@ -186,6 +186,13 @@ export const TOOLS = [
   { name: "Roman Numeral Converter", slug: "roman-numeral-converter", category: "Educational", description: "Convert between numbers and Roman numerals." },
   { name: "Number to Words", slug: "number-to-words", category: "Educational", description: "Convert numbers into written words." },
   { name: "Words to Number", slug: "words-to-number", category: "Educational", description: "Convert written numbers into digits." },
+  { name: "Multiplication Table Generator", slug: "multiplication-table-generator", category: "Educational", description: "Generate multiplication tables for any number." },
+  { name: "Prime Number Checker", slug: "prime-number-checker", category: "Educational", description: "Check whether a number is prime." },
+  { name: "Fibonacci Sequence Generator", slug: "fibonacci-sequence-generator", category: "Educational", description: "Generate the Fibonacci sequence up to any length or limit." },
+  { name: "Factorial Calculator", slug: "factorial-calculator", category: "Educational", description: "Calculate the factorial of any non-negative integer." },
+  { name: "GCD / LCM Calculator", slug: "gcd-lcm-calculator", category: "Educational", description: "Find the greatest common divisor (GCD) and least common multiple (LCM) of two or more numbers." },
+  { name: "Quadratic Equation Solver", slug: "quadratic-equation-solver", category: "Educational", description: "Solve quadratic equations instantly and find real or complex roots with ease." },
+  { name: "Typing Speed Test", slug: "typing-speed-test", category: "Educational", description: "Test your typing speed and accuracy in real time." },
 
   // ---- Finance ----
   { name: "Crypto Profit Calculator", slug: "crypto-profit-calculator", category: "Finance", description: "Calculate crypto trading profits." },

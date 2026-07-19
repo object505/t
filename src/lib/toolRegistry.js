@@ -170,6 +170,13 @@ import GpaCalculator from "@/components/tools/GpaCalculator";
 import GradeCalculator from "@/components/tools/GradeCalculator";
 import ScientificCalculator from "@/components/tools/ScientificCalculator";
 import WordsToNumber from "@/components/tools/WordsToNumber";
+import MultiplicationTableGenerator from "@/components/tools/MultiplicationTableGenerator";
+import PrimeNumberChecker from "@/components/tools/PrimeNumberChecker";
+import FibonacciSequenceGenerator from "@/components/tools/FibonacciSequenceGenerator";
+import FactorialCalculator from "@/components/tools/FactorialCalculator";
+import GcdLcmCalculator from "@/components/tools/GcdLcmCalculator";
+import QuadraticEquationSolver from "@/components/tools/QuadraticEquationSolver";
+import TypingSpeedTest from "@/components/tools/TypingSpeedTest";
 
 // Batch 16: Finance
 import CryptoProfitCalculator from "@/components/tools/CryptoProfitCalculator";
@@ -354,6 +361,13 @@ export const TOOL_COMPONENTS = {
   "grade-calculator": GradeCalculator,
   "scientific-calculator": ScientificCalculator,
   "words-to-number": WordsToNumber,
+  "multiplication-table-generator": MultiplicationTableGenerator,
+  "prime-number-checker": PrimeNumberChecker,
+  "fibonacci-sequence-generator": FibonacciSequenceGenerator,
+  "factorial-calculator": FactorialCalculator,
+  "gcd-lcm-calculator": GcdLcmCalculator,
+  "quadratic-equation-solver": QuadraticEquationSolver,
+  "typing-speed-test": TypingSpeedTest,
 
   // Finance
   "crypto-profit-calculator": CryptoProfitCalculator,
