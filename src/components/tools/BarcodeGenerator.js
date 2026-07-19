@@ -144,7 +144,7 @@ export default function BarcodeGenerator() {
         <button
           onClick={downloadPNG}
           disabled={!text.trim() || !!error}
-          className="flex flex-1 items-center justify-center gap-1.5 rounded-lg border border-border py-2.5 text-sm font-medium text-slate-600 hover:bg-accent disabled:opacity-40"
+          className="flex flex-1 items-center justify-center gap-1.5 rounded-lg bg-primary py-2.5 text-sm font-medium text-white hover:bg-primary/90 disabled:opacity-40"
         >
           <Download className="h-4 w-4" /> PNG
         </button>

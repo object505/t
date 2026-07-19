@@ -106,8 +106,8 @@ export default function PomodoroTimer() {
           />
         </svg>
         <div>
-          <div className="font-mono text-5xl font-bold text-slate-800">{mins}:{secs}</div>
-          <div className="mt-1 text-xs text-slate-400">{MODE_LABELS[mode]}</div>
+          <div className="font-mono text-5xl font-bold">{mins}:{secs}</div>
+          <div className="mt-1 text-xs text-muted-foreground">{MODE_LABELS[mode]}</div>
         </div>
       </div>
 
