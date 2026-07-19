@@ -18,15 +18,15 @@ export const metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL || 'https://tz.mk'
   ),
-  title: 'ToolZone',
-  description: 'The utility workbench for everything. Text, security, images, calculators, developer tools and more - fast, private, and free. Everything runs in your browser.',
+  title: 'ToolZone - Free Online Tools for Developers, Creators & Everyone',
+  description: 'Free, fast, privacy-friendly tools that run in your browser.',
   appleWebApp: {
     title: 'ToolZone',
   },
   // --- Open Graph ---
   openGraph: {
-    title: 'ToolZone',
-    description: 'The utility workbench for everything. Text, security, images, calculators, developer tools and more - fast, private, and free. Everything runs in your browser.',
+    title: 'ToolZone - Free Online Tools for Developers, Creators & Everyone',
+    description: 'Free, fast, privacy-friendly tools that run in your browser.',
     url: 'https://tz.mk',
     siteName: 'ToolZone',
     images: [
@@ -44,8 +44,8 @@ export const metadata = {
   // --- Twitter ---
   twitter: {
     card: 'summary_large_image',
-    title: 'ToolZone',
-    description: 'The utility workbench for everything. Text, security, images, calculators, developer tools and more - fast, private, and free. Everything runs in your browser.',
+    title: 'ToolZone - Free Online Tools for Developers, Creators & Everyone',
+    description: 'Free, fast, privacy-friendly tools that run in your browser.',
     // creator: '@yourhandle',
     images: ['https://tz.mk/og-image.jpg'],
   },
