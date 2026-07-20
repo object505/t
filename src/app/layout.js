@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from 'next-themes'
 import React from 'react'
 import MainLayout from '@/components/shared/MainLayout'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,6 +72,7 @@ export default function RootLayout({ children }) {
           </MainLayout>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-SV868JKQ9S" />
     </html>
   );
 }
