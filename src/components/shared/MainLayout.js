@@ -18,7 +18,7 @@ const MainLayout = ({ children }) => {
         setPaletteOpen={setPaletteOpen}
       />
 
-      <div className="mx-auto flex max-w-[1600px]">
+      <div className="w-full mx-auto flex max-w-[1600px]">
         {/* Sidebar */}
         <Sidebar
           closeSidebar={closeSidebar}

@@ -17,7 +17,11 @@ const ToolGrid = ({ tools }) => {
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
       {tiles.map((tile) => {
         if (tile.type === "ad") {
-          return <AdSlot key={tile.key} variant="tile" className="min-h-[150px]" />;
+          return (
+            <div key={tile.key} className="overflow-hidden min-h-[150px]">
+              <AdSlot variant="tile" />
+            </div>
+          )
         }
 
         const tool = tile.tool

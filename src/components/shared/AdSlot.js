@@ -14,12 +14,12 @@ const SLOT_IDS = {
 const SIZES = {
   banner: { format: "auto", fullWidthResponsive: true },
   sidebar: { width: 300, height: 600 },
-  tile: { format: "fluid", layoutKey: "-h3-5+1v-2l-d", minWidth: 250 },
+  // In-feed ads use "fluid" + a layout key from AdSense, not auto/full-width-responsive
+  tile: { format: "fluid", layoutKey: "-h3-5+1v-2l-d" },
 };
 
 export function AdSlot({ variant = "tile", className, label = "Sponsored", slot }) {
   const insRef = useRef(null);
-  const pushedRef = useRef(false);
 
   const adSlot = slot || SLOT_IDS[variant];
   const size = SIZES[variant] || {};
@@ -27,62 +27,15 @@ export function AdSlot({ variant = "tile", className, label = "Sponsored", slot 
   useEffect(() => {
     const ins = insRef.current;
     if (!ins) return;
+
     if (ins.getAttribute("data-adsbygoogle-status")) return;
 
-    const tryPush = () => {
-      if (pushedRef.current) return;
-      pushedRef.current = true;
-      try {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
-      } catch (err) {
-        console.error("AdSense push failed:", err);
-      }
-    };
-
-    // No minimum width requirement (banner/sidebar) — push right away
-    if (!size.minWidth) {
-      tryPush();
-      return;
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      console.error("AdSense push failed:", err);
     }
-
-    // Fluid/in-feed ads need a stable width >= minWidth before pushing.
-    // Watch the parent with ResizeObserver instead of measuring once immediately.
-    const parent = ins.parentElement;
-    if (!parent) return;
-
-    let settleTimer;
-
-    const observer = new ResizeObserver((entries) => {
-      const width = entries[0]?.contentRect?.width ?? 0;
-
-      clearTimeout(settleTimer);
-
-      if (width >= size.minWidth) {
-        // debounce briefly so we push once width has actually settled,
-        // not on every intermediate layout tick
-        settleTimer = setTimeout(() => {
-          observer.disconnect();
-          tryPush();
-        }, 50);
-      }
-    });
-
-    observer.observe(parent);
-
-    // Safety net: if it never reaches minWidth, stop observing after a few seconds
-    const giveUpTimer = setTimeout(() => {
-      observer.disconnect();
-      if (!pushedRef.current) {
-        console.warn(`AdSlot "${variant}" never reached minWidth (${size.minWidth}px) — skipped`);
-      }
-    }, 5000);
-
-    return () => {
-      observer.disconnect();
-      clearTimeout(settleTimer);
-      clearTimeout(giveUpTimer);
-    };
-  }, [variant, size.minWidth]);
+  }, []);
 
   if (process.env.NODE_ENV !== "production") {
     return <PlaceholderTile variant={variant} className={className} label={label} />;
@@ -91,11 +44,7 @@ export function AdSlot({ variant = "tile", className, label = "Sponsored", slot 
   return (
     <ins
       ref={insRef}
-      className={cn(
-        "adsbygoogle block",
-        variant === "banner" && "w-full max-w-[728px] mx-auto",
-        className
-      )}
+      className={cn("adsbygoogle block", className)}
       style={{
         display: "block",
         ...(size.width ? { width: size.width, height: size.height } : {}),
@@ -115,7 +64,7 @@ function PlaceholderTile({ variant, className, label }) {
 
   const dims =
     variant === "banner"
-      ? "h-[90px] w-full max-w-[728px] mx-auto rounded-xl text-xs font-medium uppercase tracking-widest"
+      ? "h-[90px] w-full rounded-xl text-xs font-medium uppercase tracking-widest"
       : variant === "sidebar"
         ? "h-[600px] w-full rounded-xl text-xs font-medium"
         : "h-full min-h-[150px] rounded-xl text-xs font-medium";
