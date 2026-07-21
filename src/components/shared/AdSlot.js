@@ -12,7 +12,7 @@ const SLOT_IDS = {
 };
 
 const SIZES = {
-  banner: { width: 728, height: 90, format: "auto", fullWidthResponsive: true },
+  banner: { format: "auto", fullWidthResponsive: true },
   sidebar: { width: 300, height: 600 },
   // In-feed ads use "fluid" + a layout key from AdSense, not auto/full-width-responsive
   tile: { format: "fluid", layoutKey: "-h3-5+1v-2l-d" },
