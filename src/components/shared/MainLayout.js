@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
   const closeSidebar = () => setSidebarOpen(false)
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="flex flex-col min-h-screen bg-background">
       <Header
         setSidebarOpen={setSidebarOpen}
         setPaletteOpen={setPaletteOpen}

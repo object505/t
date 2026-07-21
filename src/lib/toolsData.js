@@ -2,21 +2,21 @@
 // Each tool: { name, slug, category, description }
 
 export const CATEGORIES = [
-  { name: "Text", slug: 'text', icon: "Type" },
-  { name: "Password & Security", slug: 'password-security', icon: "ShieldCheck" },
-  { name: "Image", slug: 'image', icon: "Image" },
-  { name: "Calculators", slug: 'calculators', icon: "Calculator" },
-  { name: "Date & Time", slug: 'date-time', icon: "Clock" },
-  { name: "Developer", slug: 'developer', icon: "Code2" },
-  { name: "SEO", slug: 'seo', icon: "Search" },
-  { name: "Color", slug: 'color', icon: "Palette" },
-  { name: "Random Generators", slug: 'random-generators', icon: "Dices" },
-  { name: "Social Media", slug: 'social-media', icon: "Share2" },
-  { name: "File Conversion", slug: 'file-conversion', icon: "FileOutput" },
-  { name: "Business", slug: 'business', icon: "Briefcase" },
-  { name: "Educational", slug: 'educational', icon: "GraduationCap" },
-  { name: "Finance", slug: 'finance', icon: "TrendingUp" },
-  { name: "Utility", slug: 'utility', icon: "Wrench" },
+  { name: "Text", slug: 'text', icon: "Type", color: "#0ea5e9" },              // sky
+  { name: "Password & Security", slug: 'password-security', icon: "ShieldCheck", color: "#10b981" }, // emerald
+  { name: "Image", slug: 'image', icon: "Image", color: "#d946ef" },          // fuchsia
+  { name: "Calculators", slug: 'calculators', icon: "Calculator", color: "#f59e0b" }, // amber
+  { name: "Date & Time", slug: 'date-time', icon: "Clock", color: "#8b5cf6" }, // violet
+  { name: "Developer", slug: 'developer', icon: "Code2", color: "#6366f1" },  // indigo
+  { name: "SEO", slug: 'seo', icon: "Search", color: "#14b8a6" },             // teal
+  { name: "Color", slug: 'color', icon: "Palette", color: "#f43f5e" },        // rose
+  { name: "Random Generators", slug: 'random-generators', icon: "Dices", color: "#f97316" }, // orange
+  { name: "Social Media", slug: 'social-media', icon: "Share2", color: "#3b82f6" }, // blue
+  { name: "File Conversion", slug: 'file-conversion', icon: "FileOutput", color: "#06b6d4" }, // cyan
+  { name: "Business", slug: 'business', icon: "Briefcase", color: "#a855f7" }, // purple
+  { name: "Educational", slug: 'educational', icon: "GraduationCap", color: "#eab308" }, // yellow
+  { name: "Finance", slug: 'finance', icon: "TrendingUp", color: "#22c55e" }, // green
+  { name: "Utility", slug: 'utility', icon: "Wrench", color: "#64748b" },     // slate (neutral, catch-all)
 ];
 
 export const TOOLS = [

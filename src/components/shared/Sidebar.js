@@ -62,14 +62,25 @@ const Sidebar = ({
           <Link
             key={cat.name}
             href={`/categories/${encodeURIComponent(cat.slug)}`}
-            className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors ${
-              isActive
-                ? "bg-primary/10 font-medium text-primary"
-                : "hover:bg-accent hover:text-primary"
-            }`}
+            className="flex items-center justify-between rounded-lg px-3 py-2 text-sm font-medium transition-colors"
+            // className={`flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-colors ${
+            //   isActive
+            //     ? "bg-primary/10 font-medium text-primary"
+            //     : "hover:bg-accent hover:text-primary"
+            // }`}
+            style={{
+              backgroundColor: isActive ? `${cat.color}1A` : "transparent",
+              color: isActive ? cat.color : undefined,
+            }}
+            onMouseEnter={(e) => {
+              if (!isActive) e.currentTarget.style.backgroundColor = `${cat.color}14`;
+            }}
+            onMouseLeave={(e) => {
+              if (!isActive) e.currentTarget.style.backgroundColor = "transparent";
+            }}
           >
             <span className="flex items-center gap-2.5">
-              <Icon className="h-4 w-4 shrink-0" />
+              <Icon className="h-4 w-4 shrink-0" style={{ color: cat.color }} />
               {cat.name}
             </span>
             <span className="text-[10px] text-slate-400">{count}</span>
