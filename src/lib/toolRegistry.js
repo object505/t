@@ -83,6 +83,7 @@ import WatermarkImage from "@/components/tools/WatermarkImage";
 import RotateImage from "@/components/tools/RotateImage";
 import SvgOptimizer from "@/components/tools/SvgOptimizer";
 import ColorPaletteGenerator from "@/components/tools/ColorPaletteGenerator";
+import PlaceholderImageGenerator from "@/components/tools/PlaceholderImageGenerator";
 
 // Batch 5: Calculators
 import LoanCalculator from "@/components/tools/LoanCalculator";
@@ -136,6 +137,11 @@ import UserAgentParser from "@/components/tools/UserAgentParser";
 // Batch 10: Color tools
 import ColorBlindnessSimulator from "@/components/tools/ColorBlindnessSimulator";
 import TailwindColorGenerator from "@/components/tools/TailwindColorGenerator";
+import ColorMixer from "@/components/tools/ColorMixer";
+import ColorNameFinder from "@/components/tools/ColorNameFinder";
+import CmykConverter from "@/components/tools/CmykConverter";
+import RandomPaletteGenerator from "@/components/tools/RandomPaletteGenerator";
+import ImageColorPaletteExtractor from "@/components/tools/ImageColorPaletteExtractor";
 
 // Batch 11: Random generators
 import RandomNameGenerator from "@/components/tools/RandomNameGenerator";
@@ -282,7 +288,7 @@ export const TOOL_COMPONENTS = {
   "watermark-image": WatermarkImage,
   "rotate-image": RotateImage,
   "svg-optimizer": SvgOptimizer,
-  "color-palette-generator": ColorPaletteGenerator,
+  "placeholder-image-generator": PlaceholderImageGenerator,
 
   // Calculators
   "loan-calculator": LoanCalculator,
@@ -336,6 +342,12 @@ export const TOOL_COMPONENTS = {
   // Color
   "color-blindness-simulator": ColorBlindnessSimulator,
   "tailwind-color-generator": TailwindColorGenerator,
+  "color-palette-generator": ColorPaletteGenerator,
+  "color-mixer": ColorMixer,
+  "color-name-finder": ColorNameFinder,
+  "cmyk-converter": CmykConverter,
+  "random-palette-generator": RandomPaletteGenerator,
+  "image-color-palette-extractor": ImageColorPaletteExtractor,
 
   // Random generators
   "random-name-generator": RandomNameGenerator,

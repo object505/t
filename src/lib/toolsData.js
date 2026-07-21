@@ -76,9 +76,8 @@ export const TOOLS = [
   { name: "SVG Optimizer", slug: "svg-optimizer", category: "Image", description: "Optimize and minify SVG files." },
   { name: "Blur Image", slug: "blur-image", category: "Image", description: "Apply a blur effect to images." },
   { name: "Watermark Image", slug: "watermark-image", category: "Image", description: "Add a text watermark to images." },
-  { name: "Color Picker", slug: "color-picker", category: "Image", description: "Pick colors and get HEX, RGB, and HSL values." },
-  { name: "Color Palette Generator", slug: "color-palette-generator", category: "Image", description: "Generate harmonious color palettes." },
   { name: "Image to Base64", slug: "image-to-base64", category: "Image", description: "Convert images to Base64 data URIs." },
+  { name: "Placeholder Image Generator", slug: "placeholder-image-generator", category: "Image", description: "Generate custom-sized placeholder images with your own text and colors." },
 
   // ---- Calculators ----
   { name: "BMI Calculator", slug: "bmi-calculator", category: "Calculators", description: "Calculate Body Mass Index from height and weight." },
@@ -147,6 +146,13 @@ export const TOOLS = [
   { name: "Color Blindness Simulator", slug: "color-blindness-simulator", category: "Color", description: "Simulate how colors appear with color blindness." },
   { name: "Tailwind Color Generator", slug: "tailwind-color-generator", category: "Color", description: "Generate Tailwind CSS color shades." },
   { name: "Gradient Generator", slug: "gradient-generator", category: "Color", description: "Build beautiful CSS gradients." },
+  { name: "Color Picker", slug: "color-picker", category: "Color", description: "Pick colors and get HEX, RGB, and HSL values." },
+  { name: "Color Palette Generator", slug: "color-palette-generator", category: "Color", description: "Generate harmonious color palettes." },
+  { name: "Color Mixer", slug: "color-mixer", category: "Color", description: "Blend two colors together and preview the full gradient between them." },
+  { name: "Color Name Finder", slug: "color-name-finder", category: "Color", description: "Find the closest named color match for any HEX value." },
+  { name: "CMYK Converter", slug: "cmyk-converter", category: "Color", description: "Convert colors between HEX/RGB and CMYK for print." },
+  { name: "Random Palette Generator", slug: "random-palette-generator", category: "Color", description: "Generate random color palettes with the option to lock swatches you like." },
+  { name: "Image Color Palette Extractor", slug: "image-color-palette-extractor", category: "Color", description: "Upload an image to automatically extract its dominant colors and generate a reusable color palette." },
 
   // ---- Random Generators ----
   { name: "Random Name Generator", slug: "random-name-generator", category: "Random Generators", description: "Generate random first and last names." },
