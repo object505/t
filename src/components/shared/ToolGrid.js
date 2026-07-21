@@ -18,8 +18,8 @@ const ToolGrid = ({ tools }) => {
       {tiles.map((tile) => {
         if (tile.type === "ad") {
           return (
-            <div key={tile.key} className="overflow-hidden min-h-[150px]">
-              <AdSlot variant="tile" />
+            <div key={tile.key} className="overflow-hidden w-full min-h-[150px]">
+              <AdSlot variant="tile" className='w-full' />
             </div>
           )
         }
