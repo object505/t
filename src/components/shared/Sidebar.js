@@ -93,7 +93,7 @@ const Sidebar = ({
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="sticky top-16 hidden h-[calc(100vh-4rem)] w-64 shrink-0 overflow-y-auto border-r border-border bg-background/50 lg:block scrollbar-thin">
+      <aside className="sticky top-16 hidden h-[calc(100vh-4rem)] w-72.5 shrink-0 overflow-y-auto border-r border-border bg-background/50 lg:block scrollbar-thin">
         {sidebarContent()}
         <div className="px-3 pb-4">
           <AdSlot variant="tile" className="min-h-[180px]" />
