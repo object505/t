@@ -17,7 +17,7 @@ export const CATEGORIES = [
   { name: "Educational", slug: 'educational', icon: "GraduationCap", color: "#eab308" }, // yellow
   { name: "Finance", slug: 'finance', icon: "TrendingUp", color: "#22c55e" }, // green
   { name: "Utility", slug: 'utility', icon: "Wrench", color: "#64748b" },     // slate (neutral, catch-all)
-];
+]
 
 export const TOOLS = [
   // ---- Text ----
