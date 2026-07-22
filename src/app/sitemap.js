@@ -11,12 +11,12 @@ export default function sitemap() {
       changeFrequency: "weekly",
       priority: 1,
     },
-    // {
-    //   url: `${BASE_URL}/categories`,
-    //   lastModified: new Date(),
-    //   changeFrequency: "weekly",
-    //   priority: 0.8,
-    // },
+    {
+      url: `${BASE_URL}/categories`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 
   // Category pages
